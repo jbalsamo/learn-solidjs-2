@@ -27,4 +27,6 @@ const App: Component = () => {
   );
 };
 
+export { sharps, setSharps };
+
 export default App;

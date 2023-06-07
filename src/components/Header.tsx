@@ -5,19 +5,19 @@ const Header = () => {
   return (
     <div>
       <Navbar>
-        <Nav>
-          <Row md={12}>
+        <Row md={12}>
+          <Nav>
             <Col md={{ span: 4, offset: 0 }}>
               <Navbar.Brand>Sharps Project Data</Navbar.Brand>
             </Col>
-            <Col md={{ span: 4, offset: 2 }}>
+            <Col md={{ span: 4, offset: 5 }}>
               <NavLink href="/">Home</NavLink>
             </Col>
             <Col md={{ span: 4, offset: 4 }}>
               <NavLink href="/likedSharps"> Liked Sharps</NavLink>
             </Col>
-          </Row>
-        </Nav>
+          </Nav>
+        </Row>
       </Navbar>
     </div>
   );
