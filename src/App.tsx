@@ -3,7 +3,7 @@ import type { Component } from "solid-js";
 import { createEffect, createSignal } from "solid-js";
 import Header from "./components/Header";
 import Home from "./pages/Home";
-import LikedSharps from "./pages/LikedSharps";
+import Favorites from "./pages/Favorites";
 
 const [sharps, setSharps] = createSignal([]);
 
@@ -21,7 +21,7 @@ const App: Component = () => {
       <Header />
       <Routes>
         <Route element={<Home />} end path="/" />
-        <Route element={<LikedSharps />} path="/likedsharps" />
+        <Route element={<Favorites />} path="/favorites" />
       </Routes>
     </div>
   );

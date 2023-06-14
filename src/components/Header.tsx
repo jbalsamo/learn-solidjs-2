@@ -14,7 +14,7 @@ const Header = () => {
               <NavLink href="/">Home</NavLink>
             </Col>
             <Col md={{ span: 4, offset: 4 }}>
-              <NavLink href="/likedSharps"> Liked Sharps</NavLink>
+              <NavLink href="/favorites"> Favorites</NavLink>
             </Col>
           </Nav>
         </Row>
