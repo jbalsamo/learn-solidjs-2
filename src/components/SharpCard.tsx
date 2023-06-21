@@ -1,3 +1,23 @@
+import { likedSharps, setLikedSharps } from "../pages/Favorites";
+
+const likeSharp = (sharp) => {
+  setLikedSharps([sharp, ...likedSharps()]);
+};
+
+const unLikeSharp = (sharpId) => {
+  const sharpState = likedSharps()?.filter(
+    (item) => item.project_title !== sharpId
+  );
+  setLikedSharps(sharpState);
+};
+
+const isFavorite = (sharpId: string) => {
+  const sharps = likedSharps()?.filter(
+    (item) => item.project_title === sharpId
+  );
+  return sharps?.length > 0;
+};
+
 const SharpCard = ({ sharp }) => {
   return (
     <div class="card mb-3">
@@ -16,7 +36,18 @@ const SharpCard = ({ sharp }) => {
         </p>
       </div>
       <div class="card-footer">
-        <button class="btn btn-primary">Like</button>
+        {isFavorite(sharp.project_title) ? (
+          <button
+            class="btn btn-danger"
+            onclick={() => unLikeSharp(sharp.project_title)}
+          >
+            UnLike
+          </button>
+        ) : (
+          <button class="btn btn-primary" onclick={() => likeSharp(sharp)}>
+            Like
+          </button>
+        )}
       </div>
     </div>
   );
