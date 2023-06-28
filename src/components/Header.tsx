@@ -1,5 +1,6 @@
 import { NavLink } from "@solidjs/router";
 import { Col, Container, Nav, Navbar, Row } from "solid-bootstrap";
+import { likedSharps } from "../pages/Favorites";
 
 const Header = () => {
   return (
@@ -14,7 +15,10 @@ const Header = () => {
               <NavLink href="/">Home</NavLink>
             </Col>
             <Col md={{ span: 4, offset: 4 }}>
-              <NavLink href="/favorites"> Favorites</NavLink>
+              <NavLink href="/favorites">
+                {" "}
+                Favorites ({likedSharps().length})
+              </NavLink>
             </Col>
           </Nav>
         </Row>

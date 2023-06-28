@@ -1,0 +1,13 @@
+.pagination {
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.label {
+  margin: auto 0px auto 20px;
+  padding-left: 20px;
+  font-weight: bold;
+  text-align: right;
+  justify-content: right;
+}
