@@ -29,16 +29,18 @@ const MyPagination: Component = () => {
     <>
       <Container>
         <Row>
-          <Pagination.Prev
-            onclick={() => {
-              prev();
-            }}
-          />
-          <Pagination.Next
-            onclick={() => {
-              next();
-            }}
-          />
+          <Pagination size="sm">
+            <Pagination.Prev
+              onclick={() => {
+                prev();
+              }}
+            />
+            <Pagination.Next
+              onclick={() => {
+                next();
+              }}
+            />
+          </Pagination>
         </Row>
       </Container>
     </>
