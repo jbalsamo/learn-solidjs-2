@@ -1,4 +1,5 @@
 import { Col, Container, Form, Pagination, Row } from "solid-bootstrap";
+import type { Component } from "solid-js";
 import { For, Show } from "solid-js";
 import {
   limit,
@@ -12,7 +13,7 @@ import {
 } from "../pages/Home";
 import styles from "./Pagination.module.css";
 
-const MyPagination = () => {
+const MyPagination: Component = () => {
   const prev = () => {
     if (page() > 1) {
       setOffset(offset() - limit());

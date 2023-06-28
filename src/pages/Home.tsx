@@ -1,3 +1,4 @@
+import type { Component } from "solid-js";
 import { createEffect, createSignal, For } from "solid-js";
 import { sharps } from "../App";
 import MyPagination from "../components/MyPagination";
@@ -10,11 +11,11 @@ const [page, setPage] = createSignal(1);
 const [pages, setPages] = createSignal([]);
 const [total, setTotal] = createSignal(0);
 
-const Home = () => {
+const Home: Component = () => {
   createEffect(() => {
     setTotal(sharps().length);
     let totalPages = Math.ceil(sharps().length / limit());
-    const pageArray = [];
+    const pageArray: [number?] = [];
     for (let i = 1; i <= totalPages; i++) {
       pageArray.push(i);
     }

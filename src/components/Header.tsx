@@ -1,8 +1,9 @@
 import { NavLink } from "@solidjs/router";
 import { Col, Container, Nav, Navbar, Row } from "solid-bootstrap";
+import type { Component } from "solid-js";
 import { likedSharps } from "../pages/Favorites";
 
-const Header = () => {
+const Header: Component = () => {
   return (
     <div>
       <Navbar>
