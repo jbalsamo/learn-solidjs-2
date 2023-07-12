@@ -32,6 +32,9 @@ const Home: Component = () => {
       <For each={sharps().slice(offset(), offset() + limit())}>
         {(sharp) => <SharpCard sharp={sharp} />}
       </For>
+      <div class={styles.pagination}>
+        <MyPagination />
+      </div>
     </>
   );
 };
